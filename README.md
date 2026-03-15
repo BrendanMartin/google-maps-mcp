@@ -16,13 +16,20 @@ A lightweight [MCP](https://modelcontextprotocol.io/) server that wraps Google M
 
 ### Prerequisites
 
-- Go 1.24+
 - A [Google Maps API key](https://developers.google.com/maps/documentation/geocoding/get-api-key)
 
-### Build
+### Install
+
+Download the pre-built binary for your platform from [Releases](https://github.com/BrendanMartin/google-maps-mcp/releases), or build from source:
 
 ```bash
-go build -o google-maps-mcp.exe .
+# Option 1: go install
+go install github.com/brendanmartin/google-maps-mcp@latest
+
+# Option 2: build from source
+git clone https://github.com/BrendanMartin/google-maps-mcp.git
+cd google-maps-mcp
+go build -o google-maps-mcp .
 ```
 
 ### Configure in Claude Code
