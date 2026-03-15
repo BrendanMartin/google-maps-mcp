@@ -1,6 +1,18 @@
 # Google Maps MCP Server
 
-A lightweight [MCP](https://modelcontextprotocol.io/) server that wraps Google Maps REST APIs over stdio. Built in Go for use with Claude Code and other MCP-compatible clients.
+A lightweight [MCP](https://modelcontextprotocol.io/) server that wraps Google Maps REST APIs over stdio. Built in Go for use with Claude Code and other MCP-compatible clients. No SDK or abstraction layer — just direct HTTP calls to the Google Maps API with results formatted as plain text.
+
+## Why this over the Node.js/Docker alternatives?
+
+The [official MCP Google Maps server](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/google-maps) (now archived) and community alternatives all require Node.js or Docker. This one is a single static binary (~11MB) with zero runtime dependencies — no `node_modules`, no container, no `npx`. It starts instantly and uses minimal memory.
+
+| | This server | Node.js alternatives |
+|---|---|---|
+| Runtime | None (static binary) | Node.js + npm |
+| Install | Download binary | `npx` or Docker |
+| Binary size | ~11MB | ~100MB+ (with node_modules) |
+| Startup | Instant | ~1-2s (Node.js cold start) |
+| Dependencies | 0 | npm packages |
 
 ## Tools
 
